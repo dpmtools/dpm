@@ -15,5 +15,5 @@ before-script:
   - sleep 10
 
 script:
-  - tests/tests-dpm
+  - tests/test-dpm
 
