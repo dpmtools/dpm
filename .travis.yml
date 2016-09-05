@@ -10,12 +10,13 @@ before_install:
   - sudo ./install -m
   - sudo ./install
 
+services:
+  - mongodb
+
 before_script:
   - sudo bin/dpm-start
   - sleep 10
 
-services:
-  - mongodb
-
 script:
   - tests/test-dpm
+
