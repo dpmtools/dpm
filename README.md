@@ -2,7 +2,7 @@
 A new package manager
 
 ### Install
-* ./install [-b] [-i] [-r] [-m]
+* install [-b] [-i] [-r] [-m]
 
 -b: backend
 

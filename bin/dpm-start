@@ -18,18 +18,14 @@ from conf.path import PATH_DRIVER, PATH_ADMIN, PATH_REPO, PATH_SHELVEDB
 from conf.servers import SERVER_FRONTEND, SERVER_BACKEND, SERVER_MANAGER, SERVER_RECORDER, SERVER_INSTALLER, SERVER_ALLOCATOR, SERVER_REPOSITORY, ALLOCATOR_PORT
 
 def create_paths():
-    if not os.path.exists(PATH_DRIVER):
-        os.makedirs(PATH_DRIVER, 0o755)
-    
+    os.system('mkdir -p %s' % PATH_DRIVER)
     dirname = os.path.dirname(PATH_ADMIN)
-    if not os.path.exists(dirname):
-        os.makedirs(dirname, 0o755)
-    
-    if not os.path.exists(PATH_REPO):
-        os.makedirs(PATH_REPO, 0o755)
-    
-    if not os.path.exists(PATH_SHELVEDB):
-        os.makedirs(PATH_SHELVEDB, 0o755)
+    os.system('mkdir -p %s' % dirname)
+    os.system('mkdir -p %s' % PATH_REPO)
+    os.system('mkdir -p %s' % PATH_SHELVEDB)
+    if not os.path.exists(PATH_ADMIN):
+        with open(PATH_ADMIN, 'w') as f:
+            f.writelines(['admin:adminpassword\n', 'user:password\n'])
 
 def _check_installer(addr):
     for i in range(len(SERVER_INSTALLER)):
