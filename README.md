@@ -1,5 +1,5 @@
 # DPM 
-[![Build Status](https://travis-ci.org/dpmtools/dpm.svg?branch=unstable)](https://travis-ci.org/dpmtools/dpm
+[![Build Status](https://travis-ci.org/dpmtools/dpm.svg?branch=unstable)](https://travis-ci.org/dpmtools/dpm)
 A new package manager
 
 ### Install

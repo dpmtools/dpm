@@ -7,8 +7,8 @@ LOG_ERROR = True
 PKG_MAX = 65536 # Bytes
 
 IFACE = 'lo'
-SCAN_TOOL = 'pyblade'
-INSTALL_TOOL = 'vdtools'
+SCAN_TOOL = ''
+INSTALL_TOOL = ''
 
 USER = 'test'
 PASSWORD = '123456'
