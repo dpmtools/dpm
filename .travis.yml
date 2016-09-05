@@ -10,8 +10,8 @@ before_install:
   - sudo ./install -m
   - sudo ./install
 
-before-script:
-  - bin/dpm-start
+before_script:
+  - sudo bin/dpm-start
   - sleep 10
 
 script:
