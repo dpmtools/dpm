@@ -1,16 +1,18 @@
-# DPM
+# DPM 
+[![Build Status](https://travis-ci.org/dpmtools/dpm.svg?branch=unstable)](https://travis-ci.org/dpmtools/dpm
 A new package manager
 
 ### Install
 * Run->./install [-b] [-i] [-r] [-m]
 
->> -b: backend
+\>\> -b: backend
 
->> -i: installer
+\>\> -i: installer
 
->> -r: repository
+\>\> -r: repository
 
->> -m: manager
+\>\> -m: manager
 
 ### Lisence
 DPM is distributed under the terms of the MIT license.
+
