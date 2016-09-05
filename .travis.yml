@@ -14,7 +14,7 @@ services:
   - mongodb
 
 before_script:
-  - sudo bin/dpm-start
+  - sudo bin/dpm-start &
   - sleep 10
 
 script:
