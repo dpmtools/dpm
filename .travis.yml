@@ -14,5 +14,8 @@ before_script:
   - sudo bin/dpm-start
   - sleep 10
 
+services:
+  - mongodb
+
 script:
   - tests/test-dpm
