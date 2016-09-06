@@ -16,7 +16,6 @@ if __name__ ==  '__main__':
         
     args = parser.parse_args(sys.argv[1:])
     if args.backend:
-        print '22'
         import rsa
         import yaml
         import pyblade
@@ -24,13 +23,11 @@ if __name__ ==  '__main__':
         import hash_ring
     
     elif args.installer:
-        print '33'
         import rsa
         import vdtools
         import hash_ring
     
     elif args.manager:
-        print '11'
         import rsa
         import yaml
         import tornado
@@ -38,7 +35,6 @@ if __name__ ==  '__main__':
         import websocket
     
     elif args.repository:
-        print '55'
         import rsa
         import hdfs
         import pymongo

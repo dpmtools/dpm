@@ -1,21 +1,8 @@
-#      manager.py
-#      
-#      Copyright (C) 2015  Xu Tian <tianxu@iscas.ac.cn>
 #
-#      This program is free software; you can redistribute it and/or modify
-#      it under the terms of the GNU General Public License as published by
-#      the Free Software Foundation; either version 2 of the License, or
-#      (at your option) any later version.
-#      
-#      This program is distributed in the hope that it will be useful,
-#      but WITHOUT ANY WARRANTY; without even the implied warranty of
-#      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#      GNU General Public License for more details.
-#      
-#      You should have received a copy of the GNU General Public License
-#      along with this program; if not, write to the Free Software
-#      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
-#      MA 02110-1301, USA.
+# Copyright (C) Xu Tian <tianxu@iscas.ac.cn>
+# Licensed under The MIT License (MIT)
+# http://opensource.org/licenses/MIT
+#
 
 import os
 import zlib
@@ -35,15 +22,13 @@ from recorder import RecorderServer
 from conf.log import LOG_MANAGER
 from lib.log import show_info, show_error
 from websocket import create_connection
-from conf.config import SHOW_TIME, DEBUG, USER, PASSWORD
+from conf.config import SHOW_TIME, DEBUG
 from lib.util import localhost, APP, DRIVER, get_md5, get_uid, upload_package
 from conf.servers import BACKEND_PORT, MANAGER_PORT, SERVER_BACKEND
 
 if SHOW_TIME:
     from datetime import datetime
 
-TOP = 4
-TOP_NAME = "top%d" % TOP
 INPUT_MAX = 4096
 
 class Manager(object):
@@ -356,7 +341,6 @@ class  ManagerWSHandler(tornado.websocket.WebSocketHandler):
                 result = {'op': 'download', 'uid': uid, 'data': ret}
             
             elif op == 'install':
-                print 'Manager  111--0'
                 uid = info['uid']
                 pkg = info['package']
                 ver = info['version']

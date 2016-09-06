@@ -1,21 +1,8 @@
-#      util.py
-#      
-#      Copyright (C) 2015 Xu Tian <tianxu@iscas.ac.cn>
-#      
-#      This program is free software; you can redistribute it and/or modify
-#      it under the terms of the GNU General Public License as published by
-#      the Free Software Foundation; either version 2 of the License, or
-#      (at your option) any later version.
-#      
-#      This program is distributed in the hope that it will be useful,
-#      but WITHOUT ANY WARRANTY; without even the implied warranty of
-#      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#      GNU General Public License for more details.
-#      
-#      You should have received a copy of the GNU General Public License
-#      along with this program; if not, write to the Free Software
-#      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
-#      MA 02110-1301, USA.
+#
+# Copyright (C) 2015 Xu Tian <tianxu@iscas.ac.cn>
+# Licensed under The MIT License (MIT)
+# http://opensource.org/licenses/MIT
+#
 
 import os
 import zlib
@@ -207,9 +194,7 @@ def _check_dep(buf):
 
 def localhost():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    ip = socket.inet_ntoa(fcntl.ioctl(s.fileno(), 0x8915, struct.pack('256s', IFACE[:15]))[20:24])
-    print '@@@@@@util->loaclhost', ip
-    return ip
+    return socket.inet_ntoa(fcntl.ioctl(s.fileno(), 0x8915, struct.pack('256s', IFACE[:15]))[20:24])
 
 def check_category(category):
     if CATEGORIES.has_key(category):
