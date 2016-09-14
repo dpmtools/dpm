@@ -3,6 +3,7 @@ if [ $# = 0 ]; then
 	apt-get install -y python-pip
 	apt-get install python-setuptools
 	easy_install rsa
+	pip install pytz
 	pip install pyyaml
 	pip install hash_ring
 	pip install pymongo
@@ -12,6 +13,7 @@ if [ "$1" = '-i' ]; then
     echo "installing packages for installer"
 	apt-get install -y python-pip
 	apt-get install python-setuptools
+	pip install pytz
 	easy_install rsa
 	pip install hash_ring
 	
@@ -28,6 +30,7 @@ if [ "$1" = '-b' ]; then
 	apt-get install -y python-pip
 	apt-get install python-setuptools
 	easy_install rsa
+	pip install pytz
 	pip install pyyaml
 	pip install pymongo
 	pip install hash_ring
@@ -45,6 +48,7 @@ if [ "$1" = '-m' ]; then
 	apt-get install -y python-pip
 	apt-get install python-setuptools
 	easy_install rsa
+	pip install pytz
 	pip install pyyaml
 	pip install hash_ring
 	pip install websocket-client
@@ -57,6 +61,7 @@ if [ "$1" = '-r' ]; then
 	apt-get install python-setuptools
 	easy_install rsa
 	pip install hdfs
+	pip install pytz
 	pip install pymongo
 	pip install hash_ring
 fi
