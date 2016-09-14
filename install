@@ -15,6 +15,8 @@ if [ "$1" = '-i' ]; then
 	apt-get install python-setuptools
 	pip install pytz
 	easy_install rsa
+	pip install pyyaml
+	pip install pymongo
 	pip install hash_ring
 	
     if [ -e /tmp/vdtools ]; then
@@ -50,6 +52,7 @@ if [ "$1" = '-m' ]; then
 	easy_install rsa
 	pip install pytz
 	pip install pyyaml
+	pip install pymongo
 	pip install hash_ring
 	pip install websocket-client
 	pip install tornado
@@ -62,7 +65,7 @@ if [ "$1" = '-r' ]; then
 	easy_install rsa
 	pip install hdfs
 	pip install pytz
+	pip install pyyaml
 	pip install pymongo
 	pip install hash_ring
 fi
-
