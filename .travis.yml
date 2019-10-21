@@ -1,0 +1,22 @@
+language: python
+
+python:
+  - '2.7'
+
+before_install:
+  - sudo ./install -i
+  - sudo ./install -b
+  - sudo ./install -r
+  - sudo ./install -m
+  - sudo ./install
+
+services:
+  - mongodb
+
+before_script:
+  - sudo bin/dpm-start &
+  - sleep 10
+
+script:
+  - tests/test-dpm
+

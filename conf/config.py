@@ -1,0 +1,10 @@
+HDFS = False
+DEBUG = True
+SHOW_TIME = False
+LOG_DEBUG = True
+LOG_ERROR = True
+
+IFACE = 'lo'
+SCAN_TOOL = ''
+INSTALL_TOOL = ''
+PKG_MAX = 65536
